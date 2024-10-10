@@ -1,3 +1,3 @@
 # curso.dev
 
-Implementação dos conceitos aprendidos no cuso do Filipe Deschamps
+Implementação dos conceitos aprendidos no curso do Filipe Deschamps
