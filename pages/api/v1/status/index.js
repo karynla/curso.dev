@@ -7,13 +7,6 @@
 - metodo send(), enviar, aceita por exemplo uma string para ser enviada, entre outras coisas
 - metodo json() assume o charset=utf8 e o send() nao
 - json() esse metodo espera que a response seja com um json { "chave" : "valor" };
-
-*/
-
-function status(request, response) {
-  response.status(200).json({ chave: "hello" });
-}
-
 // exporta por padrao a propriedade status
 // o next sabe que o padrao/default responsavel por ess request e response é a funcao status
 export default status;
