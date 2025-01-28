@@ -1,3 +1,12 @@
+import database from "../../../../infra/database";
+
+async function status(request, response) {
+  const result = await database.query("SELECT 1 + 1");
+  console.log(result.rows);
+  response.status(200).json({ chave: "hello" });
+}
+
+export default status;
 /*
 - requeste = vem de fora, entra no sistema/funcao
 - response = trata do que quer ser respondido para fora
@@ -9,4 +18,4 @@
 - json() esse metodo espera que a response seja com um json { "chave" : "valor" };
 // exporta por padrao a propriedade status
 // o next sabe que o padrao/default responsavel por ess request e response é a funcao status
-export default status;
+*/
