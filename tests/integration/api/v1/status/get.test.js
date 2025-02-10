@@ -29,9 +29,6 @@ test("GET to /api/v1/status should return 200", async () => {
 });
 
 
-
-
-
 test("GET to /api/v1/status should return 200", async () => {}
 define um teste com o nome "pegue a api/v1/status e retorne 200", com uma funcao assincrona
 
