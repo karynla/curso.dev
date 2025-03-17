@@ -1,10 +1,10 @@
 import database from "infra/database.js";
+import orchestrator from "tests/orchestrator.js";
 
-beforeAll(cleanDatabase);
-
-async function cleanDatabase() {
+beforeAll(async () => {
+  await orchestrator.waitForAllServices();
   await database.query("drop schema public cascade; create schema public");
-}
+});
 
 // verifica se a api consegue se conectar com o bd e se responde com um array é maior que 0
 test("POST to /api/v1/migrations should return 200", async () => {
